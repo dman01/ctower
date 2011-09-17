@@ -1,4 +1,6 @@
 Ctower::Application.routes.draw do
+  resources :blogs
+
   get "say/hello"
 
   get "say/byebye"
