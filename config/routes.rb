@@ -1,4 +1,16 @@
 Ctower::Application.routes.draw do
+  get "start/index"
+
+  get "start/about"
+
+  get "start/caseStudies"
+
+  get "start/approach"
+
+  get "index/about"
+
+  get "index/casestudies"
+
   resources :blogs
 
   get "say/hello"
@@ -54,7 +66,8 @@ Ctower::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  #root :to => 'welcome#index'
+  root to: 'start#index',as: 'start'
 
   # See how all your routes lay out with "rake routes"
 
