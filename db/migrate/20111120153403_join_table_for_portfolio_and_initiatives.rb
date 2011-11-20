@@ -1,6 +1,6 @@
 class JoinTableForPortfolioAndInitiatives < ActiveRecord::Migration
   def change
-    rename_table :Portfolio_Initiatives, :Initiatives_Portfolios
+    rename_table :portfolio_initiatives, :Initiatives_Portfolios
 
   end
 end
