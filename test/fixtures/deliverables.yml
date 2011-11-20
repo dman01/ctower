@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  initiativeId: 1
+  name: MyString
+  uniqueID: MyString
+  description: MyText
+  completionForecast: 2011-11-19
+  completionDegree: MyString
+
+two:
+  initiativeId: 1
+  name: MyString
+  uniqueID: MyString
+  description: MyText
+  completionForecast: 2011-11-19
+  completionDegree: MyString
