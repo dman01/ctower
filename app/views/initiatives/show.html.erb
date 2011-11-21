@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @initiative.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @initiative.description %>
+</p>
+
+<p>
+  <b>Phaseid:</b>
+  <%= @initiative.phaseId %>
+</p>
+
+
+<%= link_to 'Edit', edit_initiative_path(@initiative) %> |
+<%= link_to 'Back', initiatives_path %>

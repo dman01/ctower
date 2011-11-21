@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Initiativeid:</b>
+  <%= @deliverable.initiativeId %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @deliverable.name %>
+</p>
+
+<p>
+  <b>Uniqueid:</b>
+  <%= @deliverable.uniqueID %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @deliverable.description %>
+</p>
+
+<p>
+  <b>Completionforecast:</b>
+  <%= @deliverable.completionForecast %>
+</p>
+
+<p>
+  <b>Completiondegree:</b>
+  <%= @deliverable.completionDegree %>
+</p>
+
+
+<%= link_to 'Edit', edit_deliverable_path(@deliverable) %> |
+<%= link_to 'Back', deliverables_path %>

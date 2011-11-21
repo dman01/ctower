@@ -1,4 +1,10 @@
 Ctower::Application.routes.draw do
+  resources :portfolios
+
+  resources :initiatives
+
+  resources :deliverables
+
   get "start/index"
 
   get "start/about"
