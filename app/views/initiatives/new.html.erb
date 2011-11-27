@@ -1,5 +1,10 @@
 <h1>New initiative</h1>
 
-<%= render 'form' %>
+<%if Portfolio.list_by_user().count==0%>
+    Need a porfolio to tuck the initiative in, please
+    <%=link_to "create one", new_portfolio_path%>
+<%else%>
+    <%= render 'form' %>
 
-<%= link_to 'Back', initiatives_path %>
+    <%= link_to 'Back', initiatives_path %>
+<%end%>
