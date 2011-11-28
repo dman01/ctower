@@ -1,6 +1,6 @@
 <h1>New initiative</h1>
 
-<%if @portfolios.count()==0%>
+<%if Portfolio.list_by_user().count==0%>
     Need a porfolio to tuck the initiative in, please
     <%=link_to "create one", new_portfolio_path%>
 <%else%>

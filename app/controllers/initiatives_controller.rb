@@ -24,7 +24,6 @@ class InitiativesController < ApplicationController
   # GET /initiatives/new
   # GET /initiatives/new.json
   def new
-    @portfolios=Portfolio.all
     @initiative = Initiative.new
 
     respond_to do |format|
