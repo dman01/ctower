@@ -1,0 +1,28 @@
+<h1>Listing portfolio_processes</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Phases</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @portfolio_processes.each do |portfolio_process| %>
+  <tr>
+    <td><%= portfolio_process.title %></td>
+    <td><%= portfolio_process.description %></td>
+    <td><%= link_to "#{portfolio_process.phases.count()}",phases_path(:process_id =>portfolio_process.id)%></td>
+
+    <td><%= link_to 'Show', portfolio_process %></td>
+    <td><%= link_to 'Edit', edit_portfolio_process_path(portfolio_process) %></td>
+    <td><%= link_to 'Destroy', portfolio_process, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Portfolio process', new_portfolio_process_path %>

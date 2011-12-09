@@ -1,0 +1,30 @@
+<h1>Listing phases </h1>
+<%=display_process_scope(@process)%>
+<%if !@phases.empty?%>
+<table border=1>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Sortorder</th>
+    <th>Portfolioprocess</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @phases.each do |phase| %>
+  <tr>
+    <td><%= phase.title %></td>
+    <td><%= phase.description %></td>
+    <td><%= phase.sortOrder %></td>
+    <td><%= phase.portfolioProcess_id %></td>
+    <td><%= link_to 'Show', phase %></td>
+    <td><%= link_to 'Edit', edit_phase_path(phase) %></td>
+    <td><%= link_to 'Destroy', phase, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+<%end%>
+<br />
+
+<%= link_to 'New Phase', new_phase_path %>

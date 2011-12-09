@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @portfolio_process.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @portfolio_process.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_portfolio_process_path(@portfolio_process) %> |
+<%= link_to 'Back', portfolio_processes_path %>

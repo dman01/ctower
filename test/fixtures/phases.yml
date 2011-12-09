@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  description: MyText
+  sortOrder: 1
+  portfolioProcess_id: 1
+
+two:
+  title: MyString
+  description: MyText
+  sortOrder: 1
+  portfolioProcess_id: 1
