@@ -1,4 +1,8 @@
 Ctower::Application.routes.draw do
+  resources :phases
+
+  resources :portfolio_processes
+
   resources :portfolios
 
   resources :initiatives

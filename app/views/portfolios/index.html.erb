@@ -1,9 +1,12 @@
 <h1>Listing portfolios</h1>
-
-<table>
+<%= show_link_to_new%> <%=show_link_to_process%>
+<br>
+<br>
+<table border=1>
   <tr>
     <th>Title</th>
     <th>Description</th>
+    <th>Process</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,6 +16,7 @@
   <tr>
     <td><%= portfolio.title %></td>
     <td><%= portfolio.description %></td>
+    <td><%= display_process(portfolio) %></td>
     <td><%= link_to 'Show', portfolio %></td>
     <td><%= link_to 'Edit', edit_portfolio_path(portfolio) %></td>
     <td><%= link_to 'Destroy', portfolio, confirm: 'Are you sure?', method: :delete %></td>
@@ -22,4 +26,4 @@
 
 <br />
 
-<%= link_to 'New Portfolio', new_portfolio_path %>
+

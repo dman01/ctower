@@ -45,13 +45,8 @@ class InitiativesController < ApplicationController
     @initiative.title=params[:initiative][:title]
     @initiative.description=params[:initiative][:description]
     @initiative.phaseId=params[:initiative][:phaseId]
-    @portfolios=params[:portfolios]
-    @portfolios.each do |pid|
-
-      @initiative.portfolios.add(pid)
-    end
-
-
+    @portfolio_ids=params[:portfolios]
+    @initiative.portfolio_ids=@portfolio_ids
 
     respond_to do |format|
       if @initiative.save
@@ -68,6 +63,8 @@ class InitiativesController < ApplicationController
   # PUT /initiatives/1.json
   def update
     @initiative = Initiative.find(params[:id])
+    @portfolio_ids=params[:portfolios]
+    @initiative.portfolio_ids=@portfolio_ids
 
     respond_to do |format|
       if @initiative.update_attributes(params[:initiative])
