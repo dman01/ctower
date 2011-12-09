@@ -40,7 +40,18 @@ class InitiativesController < ApplicationController
   # POST /initiatives
   # POST /initiatives.json
   def create
-    @initiative = Initiative.new(params[:initiative])
+    #@initiative = Initiative.new(params[:initiative])
+    @initiative = Initiative.new
+    @initiative.title=params[:initiative][:title]
+    @initiative.description=params[:initiative][:description]
+    @initiative.phaseId=params[:initiative][:phaseId]
+    @portfolios=params[:portfolios]
+    @portfolios.each do |pid|
+      Initiatives#
+      @initiative.portfolios.add(pid)
+    end
+
+
 
     respond_to do |format|
       if @initiative.save

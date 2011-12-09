@@ -2,7 +2,6 @@
   <% if @initiative.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@initiative.errors.count, "error") %> prohibited this initiative from being saved:</h2>
-
       <ul>
       <% @initiative.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
@@ -22,7 +21,8 @@
 
     <div class="field">
       <%= f.label :portfolio %><br />
-      <%=list_portfolios :id%>
+
+      <%=select_tag(:portfolios,list_portfolios(:id), :multiple=>true,:size=>5)%>
     </div>
 
 
