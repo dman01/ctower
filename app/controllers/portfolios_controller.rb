@@ -2,7 +2,8 @@ class PortfoliosController < ApplicationController
   # GET /portfolios
   # GET /portfolios.json
   def index
-    @portfolios = Portfolio.all
+    @portfolios = Portfolio.list_by_user(session[:user_id])
+    @processes=PortfolioProcess.list_by_user(session[:user_id])
 
     respond_to do |format|
       format.html # index.html.erb

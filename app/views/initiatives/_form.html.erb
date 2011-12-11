@@ -22,7 +22,7 @@
     <div class="field">
       <%= f.label :portfolio %><br />
 
-      <%=select_tag(:portfolios,list_portfolios(:id), :multiple=>true,:size=>5)%>
+      <%=select_tag(:portfolios,list_portfolios(@initiative.id), :multiple=>true,:size=>5)%>
     </div>
 
 
