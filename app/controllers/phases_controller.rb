@@ -31,6 +31,7 @@ class PhasesController < ApplicationController
   # GET /phases/new.json
   def new
     @phase = Phase.new
+    @process=PortfolioProcess.find(params[:process_id])
 
     respond_to do |format|
       format.html # new.html.erb
@@ -41,6 +42,7 @@ class PhasesController < ApplicationController
   # GET /phases/1/edit
   def edit
     @phase = Phase.find(params[:id])
+    @process=@phase.portfolio_process
   end
 
   # POST /phases
@@ -50,7 +52,7 @@ class PhasesController < ApplicationController
 
     respond_to do |format|
       if @phase.save
-        format.html { redirect_to @phase, notice: 'Phase was successfully created.' }
+        format.html { redirect_to phases_path(notice: 'Phase was successfully created.',process_id: @phase.portfolio_process_id) }
         format.json { render json: @phase, status: :created, location: @phase }
       else
         format.html { render action: "new" }
@@ -66,7 +68,7 @@ class PhasesController < ApplicationController
 
     respond_to do |format|
       if @phase.update_attributes(params[:phase])
-        format.html { redirect_to @phase, notice: 'Phase was successfully updated.' }
+        format.html { redirect_to phases_path(notice: 'Phase was successfully updated.', process_id: @phase.portfolio_process_id) }
         format.json { head :ok }
       else
         format.html { render action: "edit" }

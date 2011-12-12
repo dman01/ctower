@@ -13,7 +13,7 @@ module PortfoliosHelper
     if PortfolioProcess.list_by_user(session[:user_id]).count !=0
       link_to("New Portfolio", new_portfolio_path)
     else
-      "Need Process"
+      "You cannot create a portfolio before you have an execution process in place that can be used for initiatives that will be in the portfolio. Create the first process #{link_to "here",new_portfolio_process_path}".html_safe
     end
   end
 
@@ -22,4 +22,5 @@ module PortfoliosHelper
       link_to("Portfolio Processes",portfolio_processes_path)
     end
   end
+
 end

@@ -10,6 +10,13 @@
   <%= @portfolio.description %>
 </p>
 
+<b>Attached Portfolio Process</b>
+<%if @portfolio.portfolio_process.count()>  0%>
+    <%=@portfolio.portfolio_process.title%><br>
+    <%@portfolio.portfolio_process.phases.each do |p|%>
+        <li><%=p.title%></li>
+    <%end%>
+<%end%>
 
 <%= link_to 'Edit', edit_portfolio_path(@portfolio) %> |
 <%= link_to 'Back', portfolios_path %>

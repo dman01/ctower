@@ -15,10 +15,16 @@
     <%= f.label :title %><br />
     <%= f.text_field :title %>
   </div>
+    <div class="field">
+        <%= f.label :description %><br />
+        <%= f.text_area :description %>
+      </div>
   <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
+      <%= f.label "Execution Process to Use" %><br />
+      <%= f.select()%>
   </div>
+
+
   <div class="actions">
     <%= f.submit %>
   </div>

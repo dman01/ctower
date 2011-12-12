@@ -44,6 +44,26 @@ class PortfolioProcessesController < ApplicationController
 
     respond_to do |format|
       if @portfolio_process.save
+        #Now, create a first phases just to avoid processes that have no phases whatsoever
+        phase=Phase.new
+        phase.title="Mobilize"
+        phase.description="Start working on the project scope"
+        phase.portfolio_process_id=@portfolio_process.id
+        phase.save
+
+        phase=Phase.new
+        phase.title="Execute"
+        phase.description="Start delivering in iterations"
+        phase.portfolio_process_id=@portfolio_process.id
+        phase.save
+
+
+        phase=Phase.new
+        phase.title="Transition"
+        phase.description="Ensure that the project outcome has been handed over to the organization"
+        phase.portfolio_process_id=@portfolio_process.id
+        phase.save
+
         format.html { redirect_to @portfolio_process, notice: 'Portfolio process was successfully created.' }
         format.json { render json: @portfolio_process, status: :created, location: @portfolio_process }
       else

@@ -23,10 +23,10 @@
     <%= f.label :sortOrder %><br />
     <%= f.number_field :sortOrder %>
   </div>
-  <div class="field">
-    <%= f.label :portfolioProcess_id %><br />
-    <%= f.number_field :portfolioProcess_id %>
-  </div>
+   <div class="field">
+     <%= f.hidden_field :portfolio_process_id,:value=>@process.id  %>
+   </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

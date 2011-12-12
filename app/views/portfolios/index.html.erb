@@ -1,7 +1,9 @@
-<h1>Listing portfolios</h1>
-<%= show_link_to_new%> <%=show_link_to_process%>
+<h1>Portfolios</h1>
+<%=show_link_to_process%><br><br><%= show_link_to_new%>
 <br>
 <br>
+<%if PortfolioProcess.any? && Portfolio.any?%>
+
 <table border=1>
   <tr>
     <th>Title</th>
@@ -11,7 +13,6 @@
     <th></th>
     <th></th>
   </tr>
-
 <% @portfolios.each do |portfolio| %>
   <tr>
     <td><%= portfolio.title %></td>
@@ -23,7 +24,5 @@
   </tr>
 <% end %>
 </table>
-
-<br />
-
+<%end%>
 
