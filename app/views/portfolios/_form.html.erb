@@ -9,7 +9,7 @@
       <% end %>
       </ul>
     </div>
-  <% end %>
+  <%end%>
 
   <div class="field">
     <%= f.label :title %><br />
@@ -20,8 +20,8 @@
         <%= f.text_area :description %>
       </div>
   <div class="field">
-      <%= f.label "Execution Process to Use" %><br />
-      <%= f.select()%>
+      <%= f.label "Execution Process to Use"%><br/>
+      <%= f.select :portfolio_process_id, options_from_collection_for_select(PortfolioProcess.list_by_user(session[:user_id]),:id,:title) %>
   </div>
 
 

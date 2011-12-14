@@ -19,7 +19,7 @@ module PortfoliosHelper
 
   def show_link_to_process
     if PortfolioProcess.has_admin_rights(session[:user_id])
-      link_to("Portfolio Processes",portfolio_processes_path)
+      link_to("Portfolio Processes  (#{PortfolioProcess.all.count()})",portfolio_processes_path)
     end
   end
 

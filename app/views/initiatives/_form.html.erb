@@ -22,14 +22,9 @@
     <div class="field">
       <%= f.label :portfolio %><br />
 
-      <%=select_tag(:portfolios,list_portfolios(@initiative.id), :multiple=>true,:size=>5)%>
+      <%=select_tag(:portfolios,list_portfolios(@initiative.id),size: @portfolios.count())%>
     </div>
 
-
-  <div class="field">
-    <%= f.label :phaseId %><br />
-    <%= f.number_field :phaseId %>
-  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

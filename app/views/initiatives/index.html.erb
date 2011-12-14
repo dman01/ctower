@@ -1,10 +1,15 @@
 <h1>Listing initiatives</h1>
 
-<table>
+<%= link_to 'New Initiative', new_initiative_path %>
+<br>
+<br>
+<%if !@initiatives.nil?%>
+<table border=1>
   <tr>
     <th>Title</th>
     <th>Description</th>
-    <th>Phaseid</th>
+    <th>Phase</th>
+    <th>Portfolios</th>
     <th></th>
     <th></th>
     <th></th>
@@ -14,14 +19,14 @@
   <tr>
     <td><%= initiative.title %></td>
     <td><%= initiative.description %></td>
-    <td><%= initiative.phaseId %></td>
+    <td><%= initiative.phase.title %></td>
+    <td><%= display_portfolios(initiative) %></td>
     <td><%= link_to 'Show', initiative %></td>
     <td><%= link_to 'Edit', edit_initiative_path(initiative) %></td>
     <td><%= link_to 'Destroy', initiative, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
+<%end%>
 
-<br />
 
-<%= link_to 'New Initiative', new_initiative_path %>

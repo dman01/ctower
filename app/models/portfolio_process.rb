@@ -6,6 +6,7 @@ class PortfolioProcess < ActiveRecord::Base
     PortfolioProcess.all
   end
 
+
   def self.has_admin_rights(user_id)
     TRUE
   end

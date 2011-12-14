@@ -25,6 +25,7 @@ class InitiativesController < ApplicationController
   # GET /initiatives/new.json
   def new
     @initiative = Initiative.new
+    @portfolios=Portfolio.list_by_user(session[:user_id])
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,6 +36,7 @@ class InitiativesController < ApplicationController
   # GET /initiatives/1/edit
   def edit
     @initiative = Initiative.find(params[:id])
+    @portfolios=Portfolio.list_by_user_based_on_phase(session[:user_id],@initiative.phase_id)
   end
 
   # POST /initiatives
@@ -44,9 +46,12 @@ class InitiativesController < ApplicationController
     @initiative = Initiative.new
     @initiative.title=params[:initiative][:title]
     @initiative.description=params[:initiative][:description]
-    @initiative.phaseId=params[:initiative][:phaseId]
     @portfolio_ids=params[:portfolios]
     @initiative.portfolio_ids=@portfolio_ids
+    #
+    # Default to the first phase in the chosen portfolio
+    phase_id=@portfolio_ids[0]
+    @initiative.phase_id=phase_id
 
     respond_to do |format|
       if @initiative.save
