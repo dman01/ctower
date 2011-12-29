@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111214213226) do
+ActiveRecord::Schema.define(:version => 20111207214336) do
 
   create_table "Initiatives_Portfolios", :id => false, :force => true do |t|
     t.integer  "portfolio_id"
@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(:version => 20111214213226) do
   create_table "initiatives", :force => true do |t|
     t.string   "title"
     t.text     "description"
-    t.integer  "phase_id"
+    t.integer  "phaseId"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
