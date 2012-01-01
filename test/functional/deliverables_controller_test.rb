@@ -2,7 +2,7 @@ require 'test_helper'
 
 class DeliverablesControllerTest < ActionController::TestCase
   setup do
-    @deliverable = deliverables(:one)
+    @deliverable = deliverables(:Deliverable1)
   end
 
   test "should get index" do

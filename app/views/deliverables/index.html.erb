@@ -2,7 +2,7 @@
 
 <table>
   <tr>
-    <th>Initiativeid</th>
+    <th>Initiative</th>
     <th>Name</th>
     <th>Uniqueid</th>
     <th>Description</th>
@@ -15,7 +15,7 @@
 
 <% @deliverables.each do |deliverable| %>
   <tr>
-    <td><%= deliverable.initiativeId %></td>
+    <td><%= deliverable.initiative.title%></td>
     <td><%= deliverable.name %></td>
     <td><%= deliverable.uniqueID %></td>
     <td><%= deliverable.description %></td>

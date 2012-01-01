@@ -1,13 +1,24 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
 
-one:
-  title: MyString
-  description: MyText
-  sortOrder: 1
-  portfolioProcess_id: 1
 
-two:
-  title: MyString
-  description: MyText
+Phase1:
+  title: Mobilize
+  description: 'The first phase'
   sortOrder: 1
-  portfolioProcess_id: 1
+  portfolio_process: Process1
+
+
+Phase2:
+  title: Execute
+  description: 'The second phase'
+  sortOrder: 2
+  portfolio_process: Process1
+
+
+Phase3:
+  title: Transition
+  description: 'The third phase'
+  sortOrder: 3
+  portfolio_process: Process1
+
+

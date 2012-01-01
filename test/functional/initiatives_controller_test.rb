@@ -1,8 +1,14 @@
 require 'test_helper'
 
 class InitiativesControllerTest < ActionController::TestCase
+  fixtures  :portfolios
   setup do
-    @initiative = initiatives(:one)
+    @initiative = initiatives(:Project1)
+    @portfolio=portfolios(:Portfolio1)
+  end
+
+  test "has portfolio" do
+    assert_equal @initiative.portfolios.count(),1,"should have had one portfolio, had #{@initiative.portfolios.count()} "
   end
 
   test "should get index" do
@@ -18,7 +24,7 @@ class InitiativesControllerTest < ActionController::TestCase
 
   test "should create initiative" do
     assert_difference('Initiative.count') do
-      post :create, initiative: @initiative.attributes
+      post :create, {initiative: @initiative.attributes,portfolios: [@portfolio.id]}
     end
 
     assert_redirected_to initiative_path(assigns(:initiative))

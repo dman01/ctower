@@ -1,9 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
 
-one:
-  title: MyString
-  description: MyText
+Portfolio1:
+  title: 'The premier portfolio'
+  description: 'A great portfolio'
+  portfolio_process: Process1
+  initiatives: Project1,Project2,Project3
 
-two:
-  title: MyString
-  description: MyText
+
