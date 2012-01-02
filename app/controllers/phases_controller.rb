@@ -6,36 +6,38 @@ class PhasesController < ApplicationController
       @process=PortfolioProcess.find(params[:process_id])
       @phases=@process.phases
     else
-      @phases = Phase.all
       @process=nil
     end
 
     respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @phases }
+      if @process.nil?
+        format.html { redirect_to portfolio_processes_path() }
+      else
+        format.html # index.html.erb
+        format.json { render json: @phases }
+      end
     end
   end
 
-  # GET /phases/1
-  # GET /phases/1.json
-  def show
-    @phase = Phase.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @phase }
-    end
-  end
 
   # GET /phases/new
   # GET /phases/new.json
   def new
     @phase = Phase.new
-    @process=PortfolioProcess.find(params[:process_id])
+    if params[:process_id]
+      @process=PortfolioProcess.find(params[:process_id])
+    else
+      @process=nil
+    end
 
     respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @phase }
+      if @process.nil?
+        #Go to the process overview page
+        format.html { redirect_to portfolio_processes_path() }
+      else
+        format.html # new.html.erb
+        format.json { render json: @phase }
+      end
     end
   end
 

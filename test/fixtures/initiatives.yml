@@ -1,11 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
 
-one:
-  title: MyString
-  description: MyText
-  phaseId: 1
+Project1:
+  title: Project A
+  description: The first project
+  phase: Phase1
+  #portfolios:  Portfolio1
 
-two:
-  title: MyString
-  description: MyText
-  phaseId: 1
+Project2:
+  title: Project B
+  description: The Second project
+  phase:  Phase2
+  #portfolios:  Portfolio1
+
+Project3:
+  title: Project C
+  description: The Third project
+  phase:  Phase3
+  #portfolios:  Portfolio1

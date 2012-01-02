@@ -2,7 +2,7 @@ require 'test_helper'
 
 class PortfolioProcessesControllerTest < ActionController::TestCase
   setup do
-    @portfolio_process = portfolio_processes(:one)
+    @portfolio_process = portfolio_processes(:Process1)
   end
 
   test "should get index" do

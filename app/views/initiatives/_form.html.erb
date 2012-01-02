@@ -14,6 +14,15 @@
     <%= f.label :title %><br />
     <%= f.text_field :title %>
   </div>
+
+  <%if (@initiative.id || -1)>0 %>
+        <div class="field">
+            <%= f.label :phase %><br />
+
+            <%=select_tag(:phase_id,list_phases(@initiative),size: @initiative.portfolios[0].portfolio_process.phases.count())%>
+          </div>
+   <%end%>
+
   <div class="field">
     <%= f.label :description %><br />
     <%= f.text_area :description %>
@@ -22,7 +31,7 @@
     <div class="field">
       <%= f.label :portfolio %><br />
 
-      <%=select_tag(:portfolios,list_portfolios(@initiative.id),size: @portfolios.count())%>
+      <%=select_tag(:portfolios,list_portfolios(@initiative.id),multiple: "multiple",name: "portfolios[]", size: @portfolios.count())%>
     </div>
 
   <div class="actions">

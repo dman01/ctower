@@ -2,7 +2,7 @@ module InitiativesHelper
 
   def list_portfolios(initiative_id)
     #get the portfolios the user has access to
-    i_exists=Initiative.exists?(initiative_id)
+    i_exists=Initiative.exists?(initiative_id||-1)
 
     i=nil
     if i_exists  then
@@ -30,5 +30,20 @@ module InitiativesHelper
        retval+=", #{p.title}"
     end
     retval
+  end
+
+
+    def list_phases(initiative)
+    #get the phases for the process associated with the portfolio
+    phases=initiative.portfolios[0].portfolio_process.phases
+    retval=""
+    phases.each do |p|
+      sel=""
+      if p.id == initiative.phase_id then
+        sel="selected"
+      end
+      retval+= "<option value=\"#{p.id}\"#{sel}>#{p.title}"
+    end
+    retval.html_safe
   end
 end

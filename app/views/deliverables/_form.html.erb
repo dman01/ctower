@@ -11,18 +11,21 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :initiativeId %><br />
-    <%= f.number_field :initiativeId %>
-  </div>
+
   <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :uniqueID %><br />
+    <%= f.label "Unique Identity" %><br />
     <%= f.text_field :uniqueID %>
   </div>
+
+  <div class="field">
+    <%= f.label :Initiative %><br />
+    <%=select_tag(:initiative_id,options_from_collection_for_select(Initiative.get_by_user(session[:user_id]),:id,:title),name: "deliverable[initiative_id]")%>
+  </div>
+
   <div class="field">
     <%= f.label :description %><br />
     <%= f.text_area :description %>

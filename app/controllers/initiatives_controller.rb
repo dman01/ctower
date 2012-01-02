@@ -68,6 +68,7 @@ class InitiativesController < ApplicationController
   # PUT /initiatives/1.json
   def update
     @initiative = Initiative.find(params[:id])
+    @initiative.phase_id=params[:phase_id]
     @portfolio_ids=params[:portfolios]
     @initiative.portfolio_ids=@portfolio_ids
 

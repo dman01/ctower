@@ -1,17 +1,25 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
 
-one:
-  initiativeId: 1
-  name: MyString
-  uniqueID: MyString
-  description: MyText
-  completionForecast: 2011-11-19
-  completionDegree: MyString
+Deliverable1:
+  name: A business requirement specification
+  uniqueID: del_01
+  description: A truly unifying solution
+  completionForecast: 2011-11-18
+  completionDegree: 10%
+  initiative_id:  Project1
 
-two:
-  initiativeId: 1
-  name: MyString
-  uniqueID: MyString
-  description: MyText
-  completionForecast: 2011-11-19
-  completionDegree: MyString
+Deliverable2:
+  name: A technical overviev
+  uniqueID: deliv_02
+  description:  A solution that meets up to the business requirements
+  completionForecast: 2012-11-19
+  completionDegree: 25%
+  initiative_id:  Project1
+
+Deliverable3:
+  name: A Roadmap
+  uniqueID: deliv_03
+  description:  Describing the steps forward
+  completionForecast: 2013-11-20
+  completionDegree: 25%
+  initiative_id:  Project1

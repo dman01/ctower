@@ -9,6 +9,7 @@
     <th>Title</th>
     <th>Description</th>
     <th>Phase</th>
+    <th>Deliverables</th>
     <th>Portfolios</th>
     <th></th>
     <th></th>
@@ -20,6 +21,7 @@
     <td><%= initiative.title %></td>
     <td><%= initiative.description %></td>
     <td><%= initiative.phase.title %></td>
+    <td><%= link_to("#{initiative.deliverables.count()}",deliverables_path(initiative_id: initiative.id)) %></td>
     <td><%= display_portfolios(initiative) %></td>
     <td><%= link_to 'Show', initiative %></td>
     <td><%= link_to 'Edit', edit_initiative_path(initiative) %></td>

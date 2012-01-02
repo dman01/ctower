@@ -2,10 +2,11 @@ require 'test_helper'
 
 class PortfoliosControllerTest < ActionController::TestCase
   setup do
-    @portfolio = portfolios(:one)
+    @portfolio = portfolios(:Portfolio1)
   end
 
   test "should get index" do
+
     get :index
     assert_response :success
     assert_not_nil assigns(:portfolios)
