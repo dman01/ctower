@@ -6,7 +6,8 @@ class PortfoliosController < ApplicationController
     @processes=PortfolioProcess.list_by_user(session[:user_id])
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.js
+      format.html # _portfolios.html.erb
       format.json { render json: @portfolios }
     end
   end

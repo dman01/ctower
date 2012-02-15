@@ -6,7 +6,7 @@ class InitiativesController < ApplicationController
 
     respond_to do |format|
       format.js
-      format.html # index.html.erb
+      format.html # _portfolios.html.erb
       format.json { render json: @initiatives }
 
     end
