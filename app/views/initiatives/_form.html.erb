@@ -1,3 +1,6 @@
+
+
+
 <%= form_for(@initiative) do |f| %>
   <% if @initiative.errors.any? %>
     <div id="error_explanation">
@@ -23,9 +26,9 @@
           </div>
    <%end%>
 
-  <div class="field">
+  <div>
     <%= f.label :description %><br />
-    <%= f.text_area :description %>
+    <%= f.text_area :description,class: 'description' %>
   </div>
 
     <div class="field">

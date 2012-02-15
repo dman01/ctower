@@ -3,6 +3,8 @@
 <head>
   <title>CTower</title>
   <%= stylesheet_link_tag    "basic" %>
+  <%= stylesheet_link_tag params[:controller] %>
+  <%= stylesheet_link_tag "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/smoothness/jquery-ui.css" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
@@ -19,7 +21,7 @@
       <p class="navig_space">|</p>
                 <p class="navig_text"><%=link_to "Portfolio", portfolios_path%></p>
       <p class="navig_space">|</p>
-                <p class="navig_text"><%=link_to "initiatives", initiatives_path%></p>
+                <p class="navig_text"><%=link_to "initiatives", initiatives_path, remote: true%></p>
 
 		
 	

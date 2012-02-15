@@ -5,8 +5,10 @@ class InitiativesController < ApplicationController
     @initiatives = Initiative.all
 
     respond_to do |format|
+      format.js
       format.html # index.html.erb
       format.json { render json: @initiatives }
+
     end
   end
 
