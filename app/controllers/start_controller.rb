@@ -1,6 +1,9 @@
 class StartController < ApplicationController
   def index
-
+    respond_to do |format|
+          format.js
+          format.html
+        end
   end
 
   def about
@@ -8,9 +11,18 @@ class StartController < ApplicationController
 
 
   def caseStudies
+    respond_to do |format|
+      format.js
+     # format.html
+    end
   end
   
   def approach
+    respond_to do |format|
+      format.js
+      #format.html
+    end
+
   end
 
 end

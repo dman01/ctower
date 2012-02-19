@@ -5,7 +5,8 @@ class BlogsController < ApplicationController
     @blogs = Blog.all
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.js
+      format.html # _portfolios.html.erb
       format.json { render json: @blogs }
     end
   end

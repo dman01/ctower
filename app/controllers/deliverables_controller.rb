@@ -5,7 +5,7 @@ class DeliverablesController < ApplicationController
     @deliverables = Deliverable.all
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html # _portfolios.html.erb
       format.json { render json: @deliverables }
     end
   end

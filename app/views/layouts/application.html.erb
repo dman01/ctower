@@ -3,6 +3,7 @@
 <head>
   <title>CTower</title>
   <%= stylesheet_link_tag    "basic" %>
+  <%= stylesheet_link_tag params[:controller] %>
   <%= stylesheet_link_tag "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/smoothness/jquery-ui.css" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -10,17 +11,17 @@
 <body>
 	<div id="header">
 		<%=image_tag('radar.jpg', :class=> 'logo_image')%><p class="header_text"> CTower </p>
-		<p class="navig_text"><%=link_to "Home", start_index_path%></p>
+		<p class="navig_text"><%=link_to "Home", start_index_path, remote: true%></p>
 		<p class="navig_space">|</p>
-		<p class="navig_text"><%=link_to "The CTower Approach", start_approach_path%></p>
+		<p class="navig_text"><%=link_to "The CTower Approach", start_approach_path, remote: true%></p>
       <p class="navig_space">|</p>
-          <p class="navig_text"><%=link_to "Case Studies", start_caseStudies_path%></p>
+          <p class="navig_text"><%=link_to "Case Studies", start_caseStudies_path, remote: true%></p>
       <p class="navig_space">|</p>
-          <p class="navig_text"><%=link_to "Blog", blogs_path%></p>
+          <p class="navig_text"><%=link_to "Blog", blogs_path, remote: true%></p>
       <p class="navig_space">|</p>
-                <p class="navig_text"><%=link_to "Portfolio", portfolios_path%></p>
+                <p class="navig_text"><%=link_to "Portfolio", portfolios_path, remote: true%></p>
       <p class="navig_space">|</p>
-                <p class="navig_text"><%=link_to "initiatives", initiatives_path%></p>
+                <p class="navig_text"><%=link_to "initiatives", initiatives_path, remote: true%></p>
 
 		
 	
