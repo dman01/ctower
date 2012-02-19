@@ -2,34 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c4116d0-90b2-431c-9a3a-e3c1d55cf18c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/form.css.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/blogs/index.js.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/initiatives/index.js.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/portfolios/index.js.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/start/_approach.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/start/approach.js.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/start/caseStudies.js.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/start/casestudies/_index.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/start/index.js.erb" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/start/approach.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/start/caseStudies.html.erb" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/blogs/index.html.erb" afterPath="$PROJECT_DIR$/app/views/blogs/_index.html.erb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/initiatives/index.html.erb" afterPath="$PROJECT_DIR$/app/views/initiatives/_initiatives.html.erb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/portfolios/index.html.erb" afterPath="$PROJECT_DIR$/app/views/portfolios/_portfolios.html.erb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/start/index.html.erb" afterPath="$PROJECT_DIR$/app/views/start/_index.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/start/index.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/basic.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/basic.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/initiatives.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/initiatives.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/blogs_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/blogs_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/deliverables_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/deliverables_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/initiatives_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/initiatives_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/phases_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/phases_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/portfolio_processes_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/portfolio_processes_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/portfolios_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/portfolios_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/start_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/start_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/initiatives/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/initiatives/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/initiatives/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/initiatives/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
     </list>
     <ignored path="ctower.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -64,10 +38,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="phases_controller.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="phases_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/phases_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="33" selection-start="590" selection-end="590" vertical-scroll-proportion="0.6902655">
+            <state line="30" column="47" selection-start="684" selection-end="684" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/start/index.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -987,6 +970,11 @@
       <created>1321708121094</created>
       <updated>1321708121094</updated>
     </task>
+    <task id="LOCAL-00001" summary="Merge branch 'master' of github.com:dman01/ctower&#10;&#10;Conflicts:&#10;&#9;.idea/ctower.iml&#10;&#9;.idea/workspace.xml&#10;">
+      <created>1329669227819</created>
+      <updated>1329669227819</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers>
       <GitHub shared="false">
         <password>dfc7dfcbdfd9dfcbdfc8df9bdfc7dfeadfd2</password>
@@ -1001,7 +989,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="21" y="22" width="1498" height="923" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2584541" sideWeight="0.756" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988268" sideWeight="0.4572804" order="3" side_tool="false" content_ui="tabs" />
@@ -1009,7 +997,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850242" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20632638" sideWeight="0.2351314" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25241378" sideWeight="0.7415459" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25241378" sideWeight="0.7415459" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45048308" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1190,7 +1178,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/phases_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="33" selection-start="590" selection-end="590" vertical-scroll-proportion="0.6902655">
+        <state line="30" column="47" selection-start="684" selection-end="684" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/start/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
