@@ -39,6 +39,11 @@ class InitiativesController < ApplicationController
   def edit
     @initiative = Initiative.find(params[:id])
     @portfolios=Portfolio.list_by_user_based_on_phase(session[:user_id],@initiative.phase_id)
+
+    respond_to do |format|
+      #format.html # new.html.erb
+      format.js
+    end
   end
 
   # POST /initiatives

@@ -1,24 +1,23 @@
-<h1>Listing deliverables</h1>
 
-<table>
+
+<%= link_to 'New Deliverable', new_deliverable_path %>
+<table class="list">
+  <thead>
   <tr>
-    <th>Initiative</th>
     <th>Name</th>
-    <th>Uniqueid</th>
-    <th>Description</th>
-    <th>Completionforecast</th>
-    <th>Completiondegree</th>
+    <th>Unique Id</th>
+    <th>Forecast</th>
+    <th>Done</th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
-
-<% @deliverables.each do |deliverable| %>
-  <tr>
-    <td><%= deliverable.initiative.title%></td>
+  </thead>
+  <tbody>
+<% deliverables.each do |deliverable| %>
+  <tr title="<%=deliverable.description%>">
     <td><%= deliverable.name %></td>
     <td><%= deliverable.uniqueID %></td>
-    <td><%= deliverable.description %></td>
     <td><%= deliverable.completionForecast %></td>
     <td><%= deliverable.completionDegree %></td>
     <td><%= link_to 'Show', deliverable %></td>
@@ -26,8 +25,20 @@
     <td><%= link_to 'Destroy', deliverable, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
+  </tbody>
 </table>
 
-<br />
 
-<%= link_to 'New Deliverable', new_deliverable_path %>
+
+
+
+
+
+
+
+
+
+
+
+
+
