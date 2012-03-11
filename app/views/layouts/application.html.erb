@@ -14,7 +14,9 @@
 <body>
 <script>
 	$(function() {
-		 $( "#header a" ).button();
+		 $( "#header .navig_text a" ).button();
+        $( "#header .admin_link a" ).button();
+
          $("#home").click(function()
                     {
                       $("#contents").html("<%= j render 'start/index'%>");
@@ -27,15 +29,15 @@
 	<div id="header">
 		<%=image_tag('radar.jpg', :class=> 'logo_image', id: 'home')%>
 
-      <p class="navig_text"><%=link_to "Expectations", expectations_path, remote: true%></p>
-      <p class="navig_text"><%=link_to "The Future", expectations_path, remote: true%></p>
-      <p class="navig_text"><%=link_to "Services", expectations_path, remote: true%></p>
-      <p class="navig_text"><%=link_to "Processes", expectations_path, remote: true%></p>
-      <p class="navig_text"><%=link_to "Organization", expectations_path, remote: true%></p>
+      <p class="navig_text"><%=link_to "Drivers", "#", remote: true%></p>
+      <p class="navig_text"><%=link_to "The Future","#" , remote: true%></p>
+      <p class="navig_text"><%=link_to "Services", "#", remote: true%></p>
+      <p class="navig_text"><%=link_to "Processes", "#", remote: true%></p>
       <p class="navig_text"><%=link_to "initiatives", initiatives_path, remote: true%></p>
-      <p class="navig_text"><%=link_to "Portfolios", portfolios_path, remote: true%></p>
+      <p class="navig_text"><%=link_to "Portfolio", portfolios_path, remote: true%></p>
+      <p class="navig_text"><%=link_to "Organization", "#", remote: true%></p>
 
-
+      <p class="admin_link"><%=link_to "Admin", "#", remote: true%></p>
 
 		
 	

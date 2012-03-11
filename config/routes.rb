@@ -1,5 +1,4 @@
 Ctower::Application.routes.draw do
-  resources :expectations
 
   resources :phases
 

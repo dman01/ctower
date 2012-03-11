@@ -23,4 +23,8 @@ module PortfoliosHelper
     end
   end
 
+  def display_portfolio_dropbox
+    "portfolios..."
+  end
+
 end

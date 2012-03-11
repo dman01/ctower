@@ -42,15 +42,25 @@ div#header{
   
   .navig_text {
     font-size:13px;
-    padding-top:5px;
-    padding-right:10px;
-    padding-left:10px;
+    padding-top:1px;
+    padding-right:2px;
+    padding-left:2px;
+    margin-right:10px;
     float:left;
     
     //a:link {color:$header_navig_color;text-decoration:none;}      /* unvisited link */
     //a:visited {color:$header_navig_color;}  /* visited link */
     //a:hover {color:$header_navig_color_omo;}  /* mouse over link */
     //a:active {color:$header_navig_color;}
+  }
+
+  .admin_link{
+    font-size:13px;
+     padding-top:1px;
+     padding-right:2px;
+     padding-left:2px;
+     margin-right:10px;
+     float:right;
   }
   
 

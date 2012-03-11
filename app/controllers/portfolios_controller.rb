@@ -2,8 +2,13 @@ class PortfoliosController < ApplicationController
   # GET /portfolios
   # GET /portfolios.json
   def index
-    @portfolios = Portfolio.list_by_user(session[:user_id])
-    @processes=PortfolioProcess.list_by_user(session[:user_id])
+ #   @portfolios = Portfolio.list_by_user(session[:user_id])
+  #  @processes=PortfolioProcess.list_by_user(session[:user_id])
+    #The only time we will arrive here is when the user clicks the portfolio button
+    #Assume the first portfolio as chosen
+    #
+    @portfolio=Portfolio.first
+
 
     respond_to do |format|
       format.js
