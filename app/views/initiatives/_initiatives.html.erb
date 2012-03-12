@@ -1,10 +1,8 @@
-<h1>Listing initiatives  partial</h1>
-
 <%= link_to 'New Initiative', new_initiative_path %>
 <br>
 <br>
 <%if !@initiatives.nil?%>
-<table border=1>
+<table class="list">
   <tr>
     <th>Title</th>
     <th>Description</th>
@@ -21,10 +19,10 @@
     <td><%= initiative.title %></td>
     <td><%= initiative.description %></td>
     <td><%= initiative.phase.title %></td>
-    <td><%= link_to("#{initiative.deliverables.count()}",deliverables_path(initiative_id: initiative.id)) %></td>
+    <td><%= link_to("#{initiative.deliverables.count()}",deliverables_path(initiative_id: initiative.id), remote: true) %></td>
     <td><%= display_portfolios(initiative) %></td>
     <td><%= link_to 'Show', initiative %></td>
-    <td><%= link_to 'Edit', edit_initiative_path(initiative) %></td>
+    <td><%= link_to 'Edit', edit_initiative_path(initiative), remote: true %></td>
     <td><%= link_to 'Destroy', initiative, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>

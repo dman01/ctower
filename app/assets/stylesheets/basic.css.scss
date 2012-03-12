@@ -5,6 +5,7 @@ $header_navig_color:#3D5A3C;
 $header_navig_color_omo:#98AF43;  
 $text_color:#4A444B;
 $padding_left:10px;
+$padding_right:10px;
 $font_size:14px;
 
 
@@ -41,15 +42,25 @@ div#header{
   
   .navig_text {
     font-size:13px;
-    padding-top:5px;
-    padding-right:10px;
-    padding-left:10px;
+    padding-top:1px;
+    padding-right:2px;
+    padding-left:2px;
+    margin-right:10px;
     float:left;
     
     //a:link {color:$header_navig_color;text-decoration:none;}      /* unvisited link */
     //a:visited {color:$header_navig_color;}  /* visited link */
     //a:hover {color:$header_navig_color_omo;}  /* mouse over link */
     //a:active {color:$header_navig_color;}
+  }
+
+  .admin_link{
+    font-size:13px;
+     padding-top:1px;
+     padding-right:2px;
+     padding-left:2px;
+     margin-right:10px;
+     float:right;
   }
   
 
@@ -58,8 +69,9 @@ div#header{
 
 div#contents{
   padding-left:$padding_left;
-  padding-top:50px;
-  width:900px;
+  padding-right:$padding_right;
+  padding-top:20px;
+  //width:900px;
   margin:0px auto;
   
    .frontpage_item{
@@ -93,7 +105,7 @@ div#contents{
 
 //Tables
 
-table#list
+table.list
 {
 	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
 	font-size: 12px;

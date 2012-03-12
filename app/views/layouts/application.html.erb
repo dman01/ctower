@@ -14,21 +14,30 @@
 <body>
 <script>
 	$(function() {
-		 $( "#header a" ).button();
-	});
+		 $( "#header .navig_text a" ).button();
+        $( "#header .admin_link a" ).button();
+
+         $("#home").click(function()
+                    {
+                      $("#contents").html("<%= j render 'start/index'%>");
+        	        });
+
+
+    });
 </script>
 
 	<div id="header">
-		<%=image_tag('radar.jpg', :class=> 'logo_image')%>
+		<%=image_tag('radar.jpg', :class=> 'logo_image', id: 'home')%>
 
-		<p class="navig_text"><%=link_to "Home", start_index_path, remote: true%></p>
-		<p class="navig_text"><%=link_to "The CTower Approach", start_approach_path, remote: true%></p>
-        <p class="navig_text"><%=link_to "Case Studies", start_caseStudies_path, remote: true%></p>
-        <p class="navig_text"><%=link_to "Blog", blogs_path, remote: true%></p>
-        <p class="navig_text"><%=link_to "Portfolio", portfolios_path, remote: true%></p>
-        <p class="navig_text"><%=link_to "initiatives", initiatives_path, remote: true%></p>
+      <p class="navig_text"><%=link_to "Drivers", "#", remote: true%></p>
+      <p class="navig_text"><%=link_to "The Future","#" , remote: true%></p>
+      <p class="navig_text"><%=link_to "Services", "#", remote: true%></p>
+      <p class="navig_text"><%=link_to "Processes", "#", remote: true%></p>
+      <p class="navig_text"><%=link_to "initiatives", initiatives_path, remote: true%></p>
+      <p class="navig_text"><%=link_to "Portfolio", portfolios_path, remote: true%></p>
+      <p class="navig_text"><%=link_to "Organization", "#", remote: true%></p>
 
-
+      <p class="admin_link"><%=link_to "Admin", "#", remote: true%></p>
 
 		
 	

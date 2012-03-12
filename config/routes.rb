@@ -1,4 +1,5 @@
 Ctower::Application.routes.draw do
+
   resources :phases
 
   resources :portfolio_processes
@@ -21,11 +22,6 @@ Ctower::Application.routes.draw do
 
   get "index/casestudies"
 
-  resources :blogs
-
-  get "say/hello"
-
-  get "say/byebye"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
