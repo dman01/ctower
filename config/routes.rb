@@ -4,7 +4,11 @@ Ctower::Application.routes.draw do
 
   resources :portfolio_processes
 
-  resources :portfolios
+  resources :portfolios  do
+    member do
+      get 'cancel'
+    end
+  end
 
   resources :initiatives
 

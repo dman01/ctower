@@ -14,30 +14,30 @@
 <body>
 <script>
 	$(function() {
-		 $( "#header .navig_text a" ).button();
-        $( "#header .admin_link a" ).button();
+		 $( "#header .tool_button a" ).button();
+        $( "#header .admin_button a" ).button();
 
          $("#home").click(function()
                     {
-                      $("#contents").html("<%= j render 'start/index'%>");
+                      $("#contents").hide();
+                      $("#contents").html("<%= j render 'start/index'%>").fadeIn();
         	        });
 
-
-    });
+     });
 </script>
 
 	<div id="header">
 		<%=image_tag('radar.jpg', :class=> 'logo_image', id: 'home')%>
 
-      <p class="navig_text"><%=link_to "Drivers", "#", remote: true%></p>
-      <p class="navig_text"><%=link_to "The Future","#" , remote: true%></p>
-      <p class="navig_text"><%=link_to "Services", "#", remote: true%></p>
-      <p class="navig_text"><%=link_to "Processes", "#", remote: true%></p>
-      <p class="navig_text"><%=link_to "initiatives", initiatives_path, remote: true%></p>
-      <p class="navig_text"><%=link_to "Portfolio", portfolios_path, remote: true%></p>
-      <p class="navig_text"><%=link_to "Organization", "#", remote: true%></p>
+      <p class="tool_button"><%=link_to "Drivers", "#", remote: true%></p>
+      <p class="tool_button"><%=link_to "The Future","#" , remote: true%></p>
+      <p class="tool_button"><%=link_to "Services", "#", remote: true%></p>
+      <p class="tool_button"><%=link_to "Processes", "#", remote: true%></p>
+      <p class="tool_button"><%=link_to "initiatives", initiatives_path, remote: true%></p>
+      <p class="tool_button"><%=link_to "Portfolio", portfolios_path, remote: true,id: 'portfolio'%></p>
+      <p class="tool_button"><%=link_to "Organization", "#", remote: true%></p>
 
-      <p class="admin_link"><%=link_to "Admin", "#", remote: true%></p>
+      <p class="admin_button"><%=link_to "Admin", "#", remote: true%></p>
 
 		
 	

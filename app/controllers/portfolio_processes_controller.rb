@@ -16,7 +16,7 @@ class PortfolioProcessesController < ApplicationController
     @portfolio_process = PortfolioProcess.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.html # _show.html.erb
       format.json { render json: @portfolio_process }
     end
   end

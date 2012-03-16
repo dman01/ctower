@@ -1,12 +1,11 @@
-<%= form_for(@portfolio) do |f| %>
-  <% if @portfolio.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@portfolio.errors.count, "error") %> prohibited this portfolio from being saved:</h2>
-
-      <ul>
-      <% @portfolio.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
+<%= form_for(@portfolio,remote: true) do |f| %>
+<% if @portfolio.errors.any? %>
+<<div id="error_explanation">
+<   <h2><%= pluralize(@portfolio.errors.count, "error") %> prohibited this portfolio from being saved:</h2>
+<    <ul>
+<   <% @portfolio.errors.full_messages.each do |msg| %>
+<      <li><%= msg %></li>
+<     <% end %>
       </ul>
     </div>
   <%end%>
@@ -23,9 +22,13 @@
       <%= f.label "Execution Process to Use"%><br/>
       <%= f.select :portfolio_process_id, options_from_collection_for_select(PortfolioProcess.list_by_user(session[:user_id]),:id,:title) %>
   </div>
-
-
-  <div class="actions">
-    <%= f.submit %>
+  <div>
+    <%if the_action =="edit"
+        btnText="update"
+      else
+        btnText="Create"
+     end%>
+    <%= f.submit btnText%>
   </div>
 <% end %>
+<%=button_to "Cancel", cancel_portfolio_path, remote: true, method: :get%>
