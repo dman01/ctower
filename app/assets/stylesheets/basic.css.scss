@@ -4,9 +4,10 @@ $header_text_color:#FFFFFF;
 $header_navig_color:#3D5A3C;  
 $header_navig_color_omo:#98AF43;  
 $text_color:#4A444B;
-$padding_left:10px;
-$padding_right:10px;
-$font_size:14px;
+$padding_left:25px;
+$padding_right:25px;
+$font_size:12px;
+$font_size_mini:9px;
 
 
 
@@ -40,8 +41,8 @@ div#header{
    
   }
   
-  .navig_text {
-    font-size:13px;
+  .tool_button {
+    font-size:12px;
     padding-top:1px;
     padding-right:2px;
     padding-left:2px;
@@ -54,8 +55,8 @@ div#header{
     //a:active {color:$header_navig_color;}
   }
 
-  .admin_link{
-    font-size:13px;
+  .admin_button{
+    font-size:12px;
      padding-top:1px;
      padding-right:2px;
      padding-left:2px;
@@ -73,6 +74,17 @@ div#contents{
   padding-top:20px;
   //width:900px;
   margin:0px auto;
+
+  .show_title{
+       font-size: 22px;
+       //font-weight: bold;
+    } 
+  .show_text{
+    color:#4A444C ;
+  }
+  .mini_text{
+    font-size: $font_size_mini;
+  }
   
    .frontpage_item{
       float:left;
@@ -83,16 +95,9 @@ div#contents{
         padding-right:10px;
         padding-bottom:10px;
       }
-      .picture_text{
-     //   float:left;
-        padding-top:0px;
-        margin-top:0px;
-        
-        b{
-          font-size:$font_size+5;}
-      }
+
   }
-  
+
   
 }
 
@@ -134,4 +139,6 @@ table.list
       color: #009;
   }
 }
+
+
 

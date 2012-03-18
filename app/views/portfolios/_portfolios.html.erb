@@ -1,5 +1,6 @@
+<%= stylesheet_link_tag params[:controller] %>
 
-    <%=show_link_to_process%><br><br><%= show_link_to_new%>
+<%=show_link_to_process%><br><br><%= show_link_to_new%>
 <br>
 <br>
 <%if PortfolioProcess.any? && Portfolio.any?%>
@@ -10,6 +11,7 @@
 <script>
 	$(function() {
 		$( "#itabs" ).tabs();
+
 	});
 	</script>
 
@@ -20,16 +22,18 @@
 <div id="itabs">
 	<ul>
 	  <li><a href="#tabs-1">Portfolio Overview</a></li>
-      <li><a href="#tabs-2">inititives</a></li>
+      <li><a href="#tabs-2">initiatives</a></li>
       <li><a href="#tabs-3">Deliverables</a></li>
       <li><a href="#tabs-4">Schedule & Staffing</a></li>
       <li><a href="#tabs-5">Prioritization</a></li>
+      <li><a href="#tabs-6">Snapshots</a></li>
 	</ul>
 	<div id="tabs-1">
-		<%= render 'form' %>
+      <div id="info_frame"><%= render 'show' %></div>
+
     </div>
 	<div id="tabs-2">
-        <%#= render partial: 'initiatives/initiatives', locals: {initiatives: @portfolio[@current_portfolio_id].initiatives} %>
+        <%#=render partial: 'initiatives/initiatives', locals: {initiatives: @portfolio[@current_portfolio_id].initiatives} %>
  	</div>
     <div id="tabs-3">
  		<p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
@@ -39,6 +43,10 @@
  		Prio this!
  	</div>
   <div id="tabs-5">
+ 	 		Prio this!
+ 	 	</div>
+
+  <div id="tabs-6">
  	 		Prio this!
  	 	</div>
 </div>

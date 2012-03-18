@@ -1,0 +1,5 @@
+<%if @is_updated ==false%>
+    alert("Failed to update the portfolio");
+<%end%>
+$("#info_frame").hide();
+$("#info_frame").html("<%=j render 'show'%>").fadeIn();

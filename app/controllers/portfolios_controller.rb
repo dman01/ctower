@@ -23,7 +23,7 @@ class PortfoliosController < ApplicationController
     @portfolio = Portfolio.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.html # _show.html.erb
       format.json { render json: @portfolio }
     end
   end
@@ -42,6 +42,9 @@ class PortfoliosController < ApplicationController
   # GET /portfolios/1/edit
   def edit
     @portfolio = Portfolio.find(params[:id])
+    respond_to do |format|
+      format.js
+    end
   end
 
   # POST /portfolios
@@ -66,12 +69,16 @@ class PortfoliosController < ApplicationController
     @portfolio = Portfolio.find(params[:id])
 
     respond_to do |format|
+      @is_updated=true
       if @portfolio.update_attributes(params[:portfolio])
-        format.html { redirect_to @portfolio, notice: 'Portfolio was successfully updated.' }
-        format.json { head :ok }
+        format.js
+        #format.html { redirect_to @portfolio, notice: 'Portfolio was successfully updated.' }
+        #format.json { head :ok }
       else
-        format.html { render action: "edit" }
-        format.json { render json: @portfolio.errors, status: :unprocessable_entity }
+        @is_updated=false
+        format.js
+        #format.html { render action: "edit" }
+        #format.json { render json: @portfolio.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -87,4 +94,12 @@ class PortfoliosController < ApplicationController
       format.json { head :ok }
     end
   end
+
+  def cancel
+      @portfolio = Portfolio.find(params[:id])
+      respond_to do |format|
+        format.js
+      end
+    end
+
 end
