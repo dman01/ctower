@@ -3,7 +3,7 @@
 <head>
   <title>CTower</title>
   <%= stylesheet_link_tag    "basic" %>
-  <%= stylesheet_link_tag params[:controller] %>
+  <%#= stylesheet_link_tag params[:controller] %>
   <%= stylesheet_link_tag "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/smoothness/jquery-ui.css" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -29,15 +29,15 @@
 	<div id="header">
 		<%=image_tag('radar.jpg', :class=> 'logo_image', id: 'home')%>
 
-      <p class="tool_button"><%=link_to "Drivers", "#", remote: true%></p>
-      <p class="tool_button"><%=link_to "The Future","#" , remote: true%></p>
+      <p class="tool_button"><%=link_to "Business Drivers", "#", remote: true%></p>
+      <p class="tool_button"><%=link_to "Objectives","#" , remote: true%></p>
       <p class="tool_button"><%=link_to "Services", "#", remote: true%></p>
       <p class="tool_button"><%=link_to "Processes", "#", remote: true%></p>
       <p class="tool_button"><%=link_to "initiatives", initiatives_path, remote: true%></p>
       <p class="tool_button"><%=link_to "Portfolio", portfolios_path, remote: true,id: 'portfolio'%></p>
       <p class="tool_button"><%=link_to "Organization", "#", remote: true%></p>
 
-      <p class="admin_button"><%=link_to "Admin", "#", remote: true%></p>
+      <p class="admin_button"><%=link_to "Admin",{controller: 'admin', action: 'index'}, remote: true%></p>
 
 		
 	

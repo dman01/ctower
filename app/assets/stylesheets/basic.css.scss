@@ -6,7 +6,8 @@ $header_navig_color_omo:#98AF43;
 $text_color:#4A444B;
 $padding_left:25px;
 $padding_right:25px;
-$font_size:14px;
+$font_size:12px;
+$font_size_mini:9px;
 
 
 
@@ -41,7 +42,7 @@ div#header{
   }
   
   .tool_button {
-    font-size:13px;
+    font-size:12px;
     padding-top:1px;
     padding-right:2px;
     padding-left:2px;
@@ -55,7 +56,7 @@ div#header{
   }
 
   .admin_button{
-    font-size:13px;
+    font-size:12px;
      padding-top:1px;
      padding-right:2px;
      padding-left:2px;
@@ -80,7 +81,10 @@ div#contents{
     } 
   .show_text{
     color:#4A444C ;
-  }  
+  }
+  .mini_text{
+    font-size: $font_size_mini;
+  }
   
    .frontpage_item{
       float:left;
@@ -135,4 +139,6 @@ table.list
       color: #009;
   }
 }
+
+
 

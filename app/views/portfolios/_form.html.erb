@@ -1,4 +1,20 @@
-<%= form_for(@portfolio,remote: true) do |f| %>
+<script>
+  $(function()
+    {
+
+        $('#change_process_button').button();
+
+        $('#change_process_button').click(function()
+            {
+                alert("Not yet implemented");
+             });
+
+    });
+
+
+</script>
+
+<%= form_for(@portfolio,remote: true,class: 'default_form') do |f| %>
 <% if @portfolio.errors.any? %>
 <<div id="error_explanation">
 <   <h2><%= pluralize(@portfolio.errors.count, "error") %> prohibited this portfolio from being saved:</h2>
@@ -16,11 +32,11 @@
   </div>
     <div class="field">
         <%= f.label :description %><br />
-        <%= f.text_area :description %>
+        <%= f.text_area :description , class: 'form_description'%>
       </div>
   <div class="field">
-      <%= f.label "Execution Process to Use"%><br/>
-      <%= f.select :portfolio_process_id, options_from_collection_for_select(PortfolioProcess.list_by_user(session[:user_id]),:id,:title) %>
+      <%= f.label "Execution Process to Use: "%> <b> <%=@portfolio.portfolio_process.title %></b> <p id="change_process_button" class="mini_text">Change >></p>
+      <%#= f.select :portfolio_process_id, options_from_collection_for_select(PortfolioProcess.list_by_user(session[:user_id]),:id,:title) %>
   </div>
   <div>
     <%if the_action =="edit"
@@ -31,4 +47,4 @@
     <%= f.submit btnText%>
   </div>
 <% end %>
-<%=button_to "Cancel", cancel_portfolio_path, remote: true, method: :get%>
+<%=button_to "Cancel", cancel_portfolio_path, {remote: true, method: :get, id: 'cancel_button'}%>

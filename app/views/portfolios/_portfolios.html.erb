@@ -1,5 +1,6 @@
+<%= stylesheet_link_tag params[:controller] %>
 
-    <%=show_link_to_process%><br><br><%= show_link_to_new%>
+<%=show_link_to_process%><br><br><%= show_link_to_new%>
 <br>
 <br>
 <%if PortfolioProcess.any? && Portfolio.any?%>
@@ -10,6 +11,7 @@
 <script>
 	$(function() {
 		$( "#itabs" ).tabs();
+
 	});
 	</script>
 
@@ -24,6 +26,7 @@
       <li><a href="#tabs-3">Deliverables</a></li>
       <li><a href="#tabs-4">Schedule & Staffing</a></li>
       <li><a href="#tabs-5">Prioritization</a></li>
+      <li><a href="#tabs-6">Snapshots</a></li>
 	</ul>
 	<div id="tabs-1">
       <div id="info_frame"><%= render 'show' %></div>
@@ -40,6 +43,10 @@
  		Prio this!
  	</div>
   <div id="tabs-5">
+ 	 		Prio this!
+ 	 	</div>
+
+  <div id="tabs-6">
  	 		Prio this!
  	 	</div>
 </div>

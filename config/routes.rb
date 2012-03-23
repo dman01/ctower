@@ -1,5 +1,7 @@
 Ctower::Application.routes.draw do
 
+
+
   resources :phases
 
   resources :portfolio_processes
@@ -14,6 +16,8 @@ Ctower::Application.routes.draw do
 
   resources :deliverables
 
+  get "admin/index"
+
   get "start/index"
 
   get "start/about"
@@ -25,6 +29,8 @@ Ctower::Application.routes.draw do
   get "index/about"
 
   get "index/casestudies"
+
+
 
 
   # The priority is based upon order of creation:

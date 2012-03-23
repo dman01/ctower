@@ -96,7 +96,7 @@ class PortfoliosController < ApplicationController
   end
 
   def cancel
-
+      @portfolio = Portfolio.find(params[:id])
       respond_to do |format|
         format.js
       end
