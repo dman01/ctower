@@ -8,9 +8,4 @@ class Portfolio < ActiveRecord::Base
     Portfolio.all
   end
 
-  def self.list_by_user_based_on_phase(user_id,phase_id)
-   #List all portfolios the user has right to access that are associated with the  process
-   #the phase_id belongs to.
-   Phase.find(phase_id).portfolio_process.portfolios
-  end
 end

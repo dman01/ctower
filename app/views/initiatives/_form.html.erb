@@ -1,43 +1,32 @@
 
 
 
-<%= form_for(@initiative) do |f| %>
-  <% if @initiative.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@initiative.errors.count, "error") %> prohibited this initiative from being saved:</h2>
-      <ul>
-      <% @initiative.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+<%= form_for(initiative) do |f| %>
 
   <div class="field">
     <%= f.label :title %><br />
     <%= f.text_field :title %>
   </div>
 
-  <%if (@initiative.id || -1)>0 %>
+  <%if (initiative.id || -1)>0 %>
         <div class="field">
             <%= f.label :phase %><br />
 
-            <%=select_tag(:phase_id,list_phases(@initiative),size: @initiative.portfolios[0].portfolio_process.phases.count())%>
+            <%=select_tag(:phase_id,list_phases(initiative),size: initiative.portfolios[0].portfolio_process.phases.count())%>
           </div>
    <%end%>
 
   <div>
     <%= f.label :description %><br />
-    <%= f.text_area :description,class: 'description' %>
+    <%= f.text_area :description,class: 'form_description' %>
   </div>
 
     <div class="field">
-      <%= f.label :portfolio %><br />
-
-      <%=select_tag(:portfolios,list_portfolios(@initiative.id),multiple: "multiple",name: "portfolios[]", size: @portfolios.count())%>
+      <%#=select_tag(:portfolios,list_portfolios(initiative.id),multiple: "multiple",name: "portfolios[]")%>
+      <%= hidden_field_tag(:portfolio,portfolio.id,name: "portfolio_id") %>
     </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%#= f.submit %>
   </div>
 <% end %>

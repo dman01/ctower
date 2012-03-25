@@ -2,21 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c4116d0-90b2-431c-9a3a-e3c1d55cf18c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/admin.js.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/admin.css.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/admin_controller.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/helpers/admin_helper.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/admin/_index.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/functional/admin_controller_test.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/unit/helpers/admin_helper_test.rb" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/admins.css.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/helpers/blogs_helper.rb" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/admins/index.js.erb" afterPath="$PROJECT_DIR$/app/views/admin/index.js.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ctower.iml" afterPath="$PROJECT_DIR$/.idea/ctower.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/admins/_index.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/portfolios/_index.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20120325164823_decouple_portfolio_from_initiative.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20120325170051_move_initiatives.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20120325175230_move_again.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/fixtures/expectations.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/functional/admins_controller_test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/functional/expectations_controller_test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/unit/expectation_test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/unit/helpers/admins_helper_test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/unit/helpers/expectations_helper_test.rb" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/portfolios/_portfolios.html.erb" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/deliverables_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/deliverables_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/initiatives_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/initiatives_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/phases_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/phases_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/portfolio_processes_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/portfolio_processes_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/portfolios_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/portfolios_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/initiatives_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/initiatives_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/portfolios_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/portfolios_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/portfolio.rb" afterPath="$PROJECT_DIR$/app/models/portfolio.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/initiatives/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/initiatives/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/initiatives/_initiatives.html.erb" afterPath="$PROJECT_DIR$/app/views/initiatives/_initiatives.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/initiatives/new.html.erb" afterPath="$PROJECT_DIR$/app/views/initiatives/new.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/portfolio_processes/_index.html.erb" afterPath="$PROJECT_DIR$/app/views/portfolio_processes/_index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/portfolios/_show.html.erb" afterPath="$PROJECT_DIR$/app/views/portfolios/_show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/portfolios/index.js.erb" afterPath="$PROJECT_DIR$/app/views/portfolios/index.js.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
     </list>
     <ignored path="ctower.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,62 +54,7 @@
     <favorites_list name="ctower" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="admin_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/admin_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="18" selection-start="115" selection-end="115" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_index.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/admin/_index.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="48" selection-start="334" selection-end="334" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_index.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/portfolio_processes/_index.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="34" selection-start="217" selection-end="217" vertical-scroll-proportion="-5.625">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ctower" pinned="false" current="true" current-in-tab="true">
-        <entry file="model://ctower">
-          <provider selected="true" editor-type-id="AssociationsFileEditorProvider">
-            <state>
-              <settings isFieldsVisible="true" isMigrationFieldsVisible="true" isTypicalFieldsVisible="false" isOwnFieldsVisible="false" isHandToolMode="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/portfolio_processes/index.js.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="21" selection-start="21" selection-end="21" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin.css.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/admin.css.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="17" selection-start="211" selection-end="211" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -109,25 +67,31 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///IRB console" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///IRB console" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///IRB console" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///IRB console" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/portfolios/cancel.js.erb" />
-        <option value="$PROJECT_DIR$/app/views/portfolios/_show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/portfolios/_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/portfolios_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/portfolios/edit.js.erb" />
         <option value="$PROJECT_DIR$/app/views/portfolios/index.js.erb" />
-        <option value="$PROJECT_DIR$/app/views/portfolios/update.js.erb" />
-        <option value="$PROJECT_DIR$/app/views/start/index.js.erb" />
-        <option value="$PROJECT_DIR$/app/views/admin/index.js.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/admin_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/admin.css.scss" />
-        <option value="$PROJECT_DIR$/app/views/admin/_index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/portfolio_processes/_index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/portfolio_processes/index.js.erb" />
+        <option value="$PROJECT_DIR$/app/helpers/portfolios_helper.rb" />
+        <option value="$PROJECT_DIR$/app/models/portfolio.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/portfolios_controller.rb" />
+        <option value="$PROJECT_DIR$/app/helpers/initiatives_helper.rb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/portfolios/_index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/portfolios/_show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/initiatives/new.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/initiatives/_initiatives.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/initiatives/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/models/initiative.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20120325164823_decouple_portfolio_from_initiative.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20120325170051_move_initiatives.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20120325175230_move_again.rb" />
       </list>
     </option>
   </component>
@@ -195,6 +159,38 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ctower" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ctower" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ctower" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ctower" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ctower" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="migrate" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -329,7 +325,7 @@
       <recent name="$PROJECT_DIR$/app/views/start/casestudies" />
     </key>
   </component>
-  <component name="RunManager" selected="Rails.development">
+  <component name="RunManager" selected="Rake.db:migrate">
     <configuration default="false" name="test:functionals" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
       <module name="ctower" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -363,7 +359,9 @@
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
-      <envs />
+      <envs>
+        <env name="VERSION" value="20120325175230" />
+      </envs>
       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
       <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" track_test_folders="true" runner="rcov">
         <COVERAGE_PATTERN ENABLED="true">
@@ -834,7 +832,11 @@
       <created>1332496270717</created>
       <updated>1332496270717</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Merge branch 'master' of github.com:dman01/ctower&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;">
+      <created>1332521883707</created>
+      <updated>1332521883707</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers>
       <GitHub shared="false">
         <password>dfc7dfcbdfd9dfcbdfc8df9bdfc7dfeadfd2</password>
@@ -871,22 +873,22 @@
     <frame x="21" y="22" width="1641" height="955" extended-state="0" />
     <editor active="false" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25648415" sideWeight="0.756" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="top" auto_hide="true" internal_type="SLIDING" type="FLOATING" visible="false" weight="0.32965517" sideWeight="0.6702899" order="0" side_tool="true" content_ui="combo" x="531" y="69" width="478" height="828" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3269461" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3269461" sideWeight="0.4975278" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3269461" sideWeight="0.48763907" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26508474" sideWeight="0.19676214" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2645241" sideWeight="0.6706587" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47544912" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2645241" sideWeight="0.65628743" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47544912" sideWeight="0.49505562" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32934132" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3443804" sideWeight="0.99654937" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47544912" sideWeight="0.50061804" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34371257" sideWeight="0.99654937" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32564843" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32971016" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32708934" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25648415" sideWeight="0.756" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -960,101 +962,115 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/portfolios/index.js.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="57" selection-start="80" selection-end="80" vertical-scroll-proportion="0.036945812" />
+    <entry file="model://ctower">
+      <provider selected="true" editor-type-id="AssociationsFileEditorProvider">
+        <state>
+          <settings isFieldsVisible="true" isMigrationFieldsVisible="true" isTypicalFieldsVisible="false" isOwnFieldsVisible="false" isHandToolMode="true" />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/start/_index.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/initiatives/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+        <state line="1" column="6" selection-start="25" selection-end="25" vertical-scroll-proportion="0.038560413">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/portfolios/edit.js.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/initiatives/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="92" selection-start="117" selection-end="117" vertical-scroll-proportion="0.036945812" />
+        <state line="23" column="0" selection-start="511" selection-end="511" vertical-scroll-proportion="0.5813953">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/portfolios/_form.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/initiatives_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="46" selection-start="207" selection-end="207" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/portfolios/update.js.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="53" selection-start="158" selection-end="158" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/start/index.js.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="44" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/portfolios/_portfolios.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="83" selection-start="314" selection-end="314" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/portfolios_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="0" selection-start="2541" selection-end="2597" vertical-scroll-proportion="0.46587536">
+        <state line="6" column="16" selection-start="162" selection-end="162" vertical-scroll-proportion="0.2189781">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="47" selection-start="1485" selection-end="1485" vertical-scroll-proportion="0.46043167">
+        <state line="36" column="53" selection-start="1254" selection-end="1254" vertical-scroll-proportion="0.4005168">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+    <entry file="file://$PROJECT_DIR$/app/helpers/initiatives_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="2" selection-start="244" selection-end="244" vertical-scroll-proportion="0.64625853">
+        <state line="26" column="0" selection-start="670" selection-end="670" vertical-scroll-proportion="0.54744524">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/admin_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/portfolios/_show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="18" selection-start="115" selection-end="115" vertical-scroll-proportion="0.0">
+        <state line="13" column="73" selection-start="339" selection-end="339" vertical-scroll-proportion="0.503876">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/_index.html.erb">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20111206211515_create_portfolio_processes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="48" selection-start="334" selection-end="334" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/portfolio_processes/index.js.erb">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20111119144042_create_portfolio_initiatives.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="21" selection-start="21" selection-end="21" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/admin.css.scss">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20111119172848_change_attributenames_pi.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="17" selection-start="211" selection-end="211" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/portfolio_processes/_index.html.erb">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20111206212113_add_process_to_portfolio.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="34" selection-start="217" selection-end="217" vertical-scroll-proportion="-5.625">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="model://ctower">
-      <provider selected="true" editor-type-id="AssociationsFileEditorProvider">
-        <state>
-          <settings isFieldsVisible="true" isMigrationFieldsVisible="true" isTypicalFieldsVisible="false" isOwnFieldsVisible="false" isHandToolMode="true" />
+    <entry file="file://$PROJECT_DIR$/db/migrate/20120325164823_decouple_portfolio_from_initiative.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="24" selection-start="143" selection-end="143" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20120325175230_move_again.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="109" selection-end="109" vertical-scroll-proportion="0.1503006">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20120325170051_move_initiatives.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="22" selection-start="115" selection-end="115" vertical-scroll-proportion="0.32188842">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/initiative.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="21" selection-start="262" selection-end="262" vertical-scroll-proportion="0.28790787">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/portfolio.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="60" selection-start="292" selection-end="292" vertical-scroll-proportion="0.31669867">
+          <folding />
         </state>
       </provider>
     </entry>

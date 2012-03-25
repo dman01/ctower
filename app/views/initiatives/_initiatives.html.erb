@@ -1,30 +1,68 @@
-<%= link_to 'New Initiative', new_initiative_path %>
-<br>
-<br>
-<%if !@initiatives.nil?%>
-<table class="list">
-  <tr>
-    <th>Title</th>
-    <th>Description</th>
-    <th>Phase</th>
-    <th>Deliverables</th>
-    <th>Portfolios</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<script>
+    $(function() {
+        $("#initiative_new_button").button().click(function(event){
+            event.preventDefault();
 
-<% @initiatives.each do |initiative| %>
-  <tr>
-    <td><%= initiative.title %></td>
-    <td><%= initiative.description %></td>
-    <td><%= initiative.phase.title %></td>
-    <td><%= link_to("#{initiative.deliverables.count()}",deliverables_path(initiative_id: initiative.id), remote: true) %></td>
-    <td><%= display_portfolios(initiative) %></td>
-    <td><%= link_to 'Show', initiative %></td>
-    <td><%= link_to 'Edit', edit_initiative_path(initiative), remote: true %></td>
-    <td><%= link_to 'Destroy', initiative, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
+            // Load the form into the div that will be used for the modal window
+            $("#new_initiative_dialog_form").html("<%=j render partial: 'initiatives/form',locals: {initiative: Initiative.new}%>");
+
+
+            $("#new_initiative_dialog_form").dialog('destroy');
+            $("#new_initiative_dialog_form").dialog(
+                        {
+                         height: 600,
+                         width: 650,
+                         modal: true,
+                         buttons: {
+                                    "Create the Initiative": function(){alert("go create!");
+                                        $("#new_initiative_dialog_form form").submit();
+                                    },
+                                    "Cancel": function(){$(this).dialog('close');}
+                         }
+                        });
+
+
+
+            //Call a modal dialogue
+            //
+            $("#new_initiative_dialog_form").dialog("open");
+        });
+
+        $("#initiative_view_new_button").button();
+        $("table.list a").button();
+
+
+
+
+    });
+ </script>
+<%= link_to 'New Initiative', "#", {class: 'mini_text', id: 'initiative_new_button'} %>
+<%= link_to 'New View', '#', {class: 'mini_text', id: 'initiative_view_new_button', remote: true} %>
+<%if initiatives.length>0%>
+    <table class="list">
+      <tr>
+        <th>Title</th>
+        <th>Phase</th>
+        <th>Deliverables</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+
+    <% initiatives.each do |initiative| %>
+      <tr>
+        <td><%= initiative.title %></td>
+        <td><%= initiative.phase.title %></td>
+        <td><%= link_to("#{initiative.deliverables.count()}",deliverables_path(initiative_id: initiative.id),{class: 'mini_text', remote: true}) %></td>
+        <td><%= link_to 'Show', initiative,{class: 'mini_text', id: 'show_'+ initiative.id.to_s, remote: true} %></td>
+        <td><%= link_to 'Edit', edit_initiative_path(initiative),{class: 'mini_text', id: 'edit_' +initiative.id.to_s, remote: true}%></td>
+        <td><%= link_to 'Destroy', initiative, {class: 'mini_text', id: 'delete_'+initiative.id.to_s, remote: true}%></td>
+      </tr>
+    <% end %>
+    </table>
 <%end%>
+
+<div id="new_initiative_dialog_form" title="New Initiative"></div>
+
+
+

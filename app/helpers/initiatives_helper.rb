@@ -24,13 +24,7 @@ module InitiativesHelper
     retval.html_safe
   end
 
-  def display_portfolios(initiative)
-    retval=""
-    initiative.portfolios.each do |p|
-       retval+=", #{p.title}"
-    end
-    retval
-  end
+
 
 
     def list_phases(initiative)

@@ -13,7 +13,7 @@ class PhasesController < ApplicationController
       if @process.nil?
         format.html { redirect_to portfolio_processes_path() }
       else
-        format.html # _portfolios.html.erb
+        format.html # _index.html.erb
         format.json { render json: @phases }
       end
     end
