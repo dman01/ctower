@@ -2,34 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c4116d0-90b2-431c-9a3a-e3c1d55cf18c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/admins/_index.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/portfolios/_index.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20120325164823_decouple_portfolio_from_initiative.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20120325170051_move_initiatives.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20120325175230_move_again.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/fixtures/expectations.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/functional/admins_controller_test.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/functional/expectations_controller_test.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/unit/expectation_test.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/unit/helpers/admins_helper_test.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/unit/helpers/expectations_helper_test.rb" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/portfolios/_portfolios.html.erb" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/deliverables_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/deliverables_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/initiatives_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/initiatives_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/phases_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/phases_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/portfolio_processes_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/portfolio_processes_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/portfolios_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/portfolios_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/initiatives_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/initiatives_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/portfolios_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/portfolios_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/portfolio.rb" afterPath="$PROJECT_DIR$/app/models/portfolio.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/initiatives/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/initiatives/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/initiatives/_initiatives.html.erb" afterPath="$PROJECT_DIR$/app/views/initiatives/_initiatives.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/initiatives/new.html.erb" afterPath="$PROJECT_DIR$/app/views/initiatives/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/portfolios/_show.html.erb" afterPath="$PROJECT_DIR$/app/views/portfolios/_show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/portfolios/index.js.erb" afterPath="$PROJECT_DIR$/app/views/portfolios/index.js.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
     </list>
     <ignored path="ctower.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -836,7 +809,11 @@
       <created>1332521883707</created>
       <updated>1332521883707</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Merge branch 'master' of github.com:dman01/ctower&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;">
+      <created>1332703939251</created>
+      <updated>1332703939251</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers>
       <GitHub shared="false">
         <password>dfc7dfcbdfd9dfcbdfc8df9bdfc7dfeadfd2</password>
