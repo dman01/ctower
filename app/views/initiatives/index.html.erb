@@ -1,0 +1,65 @@
+<%= stylesheet_link_tag params[:controller] %>
+<script>
+    $(function() {
+        //alert("kalle anka");
+        $("#initiative_new_button").button();
+        $("#initiative_view_new_button").button();
+
+
+
+        function setFocus(){//alert("kalle");
+         }
+
+        $("#initiative_new_button").button().click(function(event)
+                    {
+                        event.preventDefault();
+                        //alert("nisse");
+                        // Load the form into the div that will be used for the modal window
+                        $( "#dialog:ui-dialog" ).dialog( "destroy" );
+                        $("#new_initiative_dialog_form").load('initiatives/new?portfolio_id=<%=@portfolio_id%>',setFocus());
+                        //$("#new_initiative_dialog_form input[@type=textarea]").focus();
+                        $("#new_initiative_dialog_form").dialog(
+                                    {
+                                     height: 600,
+                                     width: 650,
+                                     modal: true,
+                                     buttons: {
+                                                "Create the Initiative": function()
+                                                    {
+                                                      $("#new_initiative_dialog_form form")
+                                                            .bind("ajax:success", function(event, data, status, xhr)
+                                                              {
+                                                                $("#new_initiative_dialog_form").dialog('close');
+                                                                //Make an ajax callback to reload the initiatives
+                                                                $("#initiatives").load('<%=url_for(list_initiatives_path)%>',{portfolio_id: <%=@portfolio_id%>}).fadeIn(1500);
+                                                                  
+                                                              });
+                                                      $("#new_initiative_dialog_form form").submit();
+                                                    },
+                                                "Cancel": function(){$(this).dialog('close').fadeOut(1500);
+                                                                     //$(this).dialog('destroy');
+                                                                     //alert("kalle");
+                                                                     }
+                                               }
+                                     });
+
+
+
+                        //Call a modal dialogue
+                        //
+                        $("#new_initiative_dialog_form").dialog("open");
+                    });
+
+    });
+</script>
+
+
+
+<%= link_to 'New Initiative', "#", {class: 'mini_text', id: 'initiative_new_button'} %>
+<%= link_to 'New View', '#', {class: 'mini_text', id: 'initiative_view_new_button', remote: true} %>
+
+<div id="initiatives">
+    <%= render partial: 'initiatives' %>
+</div>
+
+<div id="new_initiative_dialog_form" title="New Initiative"></div>

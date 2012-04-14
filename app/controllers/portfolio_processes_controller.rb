@@ -6,7 +6,7 @@ class PortfolioProcessesController < ApplicationController
 
     respond_to do |format|
       format.js
-      format.html # _portfolios.html.erb
+      format.html # _index.html.erb
       format.json { render json: @portfolio_processes }
     end
   end

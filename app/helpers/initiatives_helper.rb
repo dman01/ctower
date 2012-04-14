@@ -24,13 +24,7 @@ module InitiativesHelper
     retval.html_safe
   end
 
-  def display_portfolios(initiative)
-    retval=""
-    initiative.portfolios.each do |p|
-       retval+=", #{p.title}"
-    end
-    retval
-  end
+
 
 
     def list_phases(initiative)
@@ -43,6 +37,16 @@ module InitiativesHelper
         sel="selected"
       end
       retval+= "<option value=\"#{p.id}\"#{sel}>#{p.title}"
+    end
+    retval.html_safe
+    end
+
+  def list_portfolio_phases(portfolio_id)
+    #get the phases for the process associated with the portfolio
+    phases=Portfolio.find(portfolio_id).portfolio_process.phases
+    retval=""
+    phases.each do |p|
+      retval+= "<option value=\"#{p.id}\">#{p.title}"
     end
     retval.html_safe
   end

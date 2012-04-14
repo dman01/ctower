@@ -1,4 +1,13 @@
-<%= link_to "Edit", edit_portfolio_path(:id=> @portfolio.id), remote: true %>
+<script>
+    $(function() {
+        $("#portfolio_edit_button").button();
+
+    });
+ </script>
+
+
+<%= link_to "Edit", edit_portfolio_path(:id=> @portfolio.id), {id: 'portfolio_edit_button',class: 'mini_text',remote: true}%>
+<br>
 <span class="show_title"><%= @portfolio.title %></span>
 <p class="show_text"><%= @portfolio.description %></p>
 

@@ -7,12 +7,13 @@ class PortfoliosController < ApplicationController
     #The only time we will arrive here is when the user clicks the portfolio button
     #Assume the first portfolio as chosen
     #
+    # Change this later, just for now...
     @portfolio=Portfolio.first
 
 
     respond_to do |format|
       format.js
-      format.html # _portfolios.html.erb
+      format.html # _index.html.erb
       format.json { render json: @portfolios }
     end
   end

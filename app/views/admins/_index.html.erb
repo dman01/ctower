@@ -1,0 +1,41 @@
+<%= stylesheet_link_tag params[:controller] %>
+<script>
+$(function() {
+	var icons = {
+		header: "ui-icon-circle-arrow-e",
+		headerSelected: "ui-icon-circle-arrow-s"
+	};
+	$( "#accordion" ).accordion({
+		icons: icons,
+        collapsible: true
+	});
+    $("#accordion").hide();
+    $("#accordion").accordion("activate", false);
+    $("#accordion").fadeIn();
+});
+</script>
+
+
+
+<div id="admin_links">
+
+    <div id="accordion">
+            <h3><a href="#">Porfolio Aspects</a></h3>
+                <div>
+                   <%= link_to("Porfolio Processes",portfolio_processes_path,remote: true) %>
+                </div>
+            <h3><a href="#">Users</a></h3>
+                <div>
+                 <p><%= link_to("Global Users","#",remote: true) %></p> 
+                  <p><%= link_to("Groups","#",remote: true) %></p>
+                </div>
+            <h3><a href="#">Workspace Access</a></h3>
+                <div>
+                      <%= link_to("Global Users","#",remote: true) %>
+                      <%= link_to("Groups","#",remote: true) %>
+                </div>
+     </div>
+ </div>
+
+<div id="admin_contents"> howdy</div>
+

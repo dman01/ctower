@@ -14,6 +14,13 @@ Ctower::Application.routes.draw do
 
   resources :initiatives
 
+  resources :initiatives  do
+      collection do
+        post 'list'
+      end
+    end
+
+
   resources :deliverables
 
   get "admin/index"

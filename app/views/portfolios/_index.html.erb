@@ -1,0 +1,42 @@
+<%= stylesheet_link_tag params[:controller] %>
+
+    <script>
+        $(function() {
+            $( "#itabs" ).tabs({
+            			ajaxOptions: {
+            				error: function( xhr, status, index, anchor ) {
+            					$( anchor.hash ).html(
+            						"Couldn't load this tab." );
+            				}
+            			}
+            		});
+        });
+
+
+
+
+     </script>
+    
+    
+    
+    <div class="initiative">
+    
+    <div id="itabs">
+        <ul>
+          <li><a href="#tabs-1">Portfolio Overview</a></li>
+          <li><a href="/initiatives?portfolio_id=<%=@portfolio.id%>">initiatives</a></li>
+        </ul>
+        <div id="tabs-1">
+          <div id="info_frame">
+
+            <%= render 'show' %>
+          </div>
+    
+        </div>
+
+    </div>
+    
+    </div><!-- End initiative -->
+
+
+
