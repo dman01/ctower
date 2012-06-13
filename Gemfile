@@ -21,6 +21,8 @@ group :assets do
   gem 'sass-rails', "  ~> 3.1.0"
   gem 'coffee-rails', "~> 3.1.0"
   gem 'uglifier'
+  gem 'jquery-datatables-rails', :git =>'https://github.com/rweng/jquery-datatables-rails.git'
+
 end
 
 gem 'jquery-rails'

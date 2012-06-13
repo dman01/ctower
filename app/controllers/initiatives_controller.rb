@@ -69,8 +69,13 @@ class InitiativesController < ApplicationController
     @initiative = Initiative.new
     @initiative.title=params[:initiative][:title]
     @initiative.description=params[:initiative][:description]
+    @initiative.start=params[:initiative][:start]
+    @initiative.end=params[:initiative][:end]
     @initiative.portfolio_id=params[:portfolio_id]
     @initiative.phase_id=params[:phase_id]
+    @initiative.completionDegree=params[:initiative][:completionDegree]
+
+
 
     #
     # Default to the first phase in the chosen portfolio

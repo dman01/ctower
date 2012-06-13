@@ -45,8 +45,14 @@ module InitiativesHelper
     #get the phases for the process associated with the portfolio
     phases=Portfolio.find(portfolio_id).portfolio_process.phases
     retval=""
+    count=0
     phases.each do |p|
-      retval+= "<option value=\"#{p.id}\">#{p.title}"
+      if count==0
+        count=1
+        retval+= "<option value=\"#{p.id}\" selected>#{p.title}"
+      else
+        retval+= "<option value=\"#{p.id}\">#{p.title}"
+      end
     end
     retval.html_safe
   end

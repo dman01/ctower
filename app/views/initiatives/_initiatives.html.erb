@@ -1,29 +1,44 @@
 <script>
     $(function(){
-        $("table.list a").button();
+        $("table a").button();
+        $("#initiatives_list").dataTable({
+            "bJQueryUI": true
+        });
+
+
+
     });
  </script>
 <%if @initiatives.length>0%>
-    <table class="list">
+    <table id="initiatives_list">
+     <thead>
       <tr>
         <th>Title</th>
         <th>Phase</th>
+        <th>Completion%</th>
+        <th>Start</th>
+        <th>End</th>
         <th>Deliverables</th>
-        <th></th>
-        <th></th>
-        <th></th>
+
+      </tr>
+     </thead>
+      <tbody>
+    <% @initiatives.each do |initiative| %>
+
+      <tr>
+        <td><%= link_to 'Show', initiative,{class: 'mini_text', id: 'show_'+ initiative.id.to_s, remote: true} %>
+          <%= link_to 'Edit', edit_initiative_path(initiative),{class: 'mini_text', id: 'edit_' +initiative.id.to_s, remote: true}%>
+          <%= link_to 'Destroy', initiative, {class: 'mini_text', id: 'delete_'+initiative.id.to_s, remote: true}%>
+          <%= initiative.title %></td>
+        <td><%= initiative.phase.title %></td>
+        <td><%= initiative.completionDegree %></td>
+        <td><%= initiative.start %></td>
+        <td><%= initiative.end %></td>
+        <td><%= link_to("#{initiative.deliverables.count()}",deliverables_path(initiative_id: initiative.id),{class: 'mini_text', remote: true}) %></td>
       </tr>
 
-    <% @initiatives.each do |initiative| %>
-      <tr>
-        <td><%= initiative.title %></td>
-        <td><%= initiative.phase.title %></td>
-        <td><%= link_to("#{initiative.deliverables.count()}",deliverables_path(initiative_id: initiative.id),{class: 'mini_text', remote: true}) %></td>
-        <td><%= link_to 'Show', initiative,{class: 'mini_text', id: 'show_'+ initiative.id.to_s, remote: true} %></td>
-        <td><%= link_to 'Edit', edit_initiative_path(initiative),{class: 'mini_text', id: 'edit_' +initiative.id.to_s, remote: true}%></td>
-        <td><%= link_to 'Destroy', initiative, {class: 'mini_text', id: 'delete_'+initiative.id.to_s, remote: true}%></td>
-      </tr>
     <% end %>
+      </tbody>
     </table>
 <%end%>
 

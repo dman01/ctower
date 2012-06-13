@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120325175230) do
+ActiveRecord::Schema.define(:version => 20120425193549) do
 
   create_table "blogs", :force => true do |t|
     t.string   "title"
@@ -38,6 +38,9 @@ ActiveRecord::Schema.define(:version => 20120325175230) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "portfolio_id"
+    t.date     "start"
+    t.date     "end"
+    t.integer  "completionDegree"
   end
 
   create_table "phases", :force => true do |t|
