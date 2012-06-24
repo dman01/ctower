@@ -1,6 +1,7 @@
 <script>
     $(function(){
-        $("table a").button();
+        //$("table a").button();
+        $(".mini_button").button();
         $("#initiatives_list").dataTable({
             "bJQueryUI": true
         });
@@ -26,9 +27,9 @@
     <% @initiatives.each do |initiative| %>
 
       <tr>
-        <td><%= link_to 'Show', initiative,{class: 'mini_text', id: 'show_'+ initiative.id.to_s, remote: true} %>
-          <%= link_to 'Edit', edit_initiative_path(initiative),{class: 'mini_text', id: 'edit_' +initiative.id.to_s, remote: true}%>
-          <%= link_to 'Destroy', initiative, {class: 'mini_text', id: 'delete_'+initiative.id.to_s, remote: true}%>
+        <td><p class= "mini_button" <%= "id=""show_#{initiative.id.to_s}"%>>Show</p>
+          <p class="mini_button" <%="id=""edit_#{initiative.id.to_s}"%>>Edit</p>
+          <p class="mini_button" <%="id=""delete_#{initiative.id.to_s}"%>>Delete</p>
           <%= initiative.title %></td>
         <td><%= initiative.phase.title %></td>
         <td><%= initiative.completionDegree %></td>

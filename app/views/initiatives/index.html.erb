@@ -5,6 +5,8 @@
         $("#initiative_new_button").button();
         $("#initiative_view_new_button").button();
 
+        $('#dialog-confirm').hide();
+
 
 
         function setFocus(){//alert("kalle");
@@ -112,25 +114,53 @@
         //
 
         $("#initiatives").on("click",'[id^="delete"]',function(e){
-                    e.preventDefault();
-                   alert(this.id);
-                });
+            e.preventDefault();
+            var i_id=this.id.substr(this.id.indexOf('_')+1);
+            //
+            // a workaround for a flaw in the demo system (http://dev.jqueryui.com/ticket/4375), ignore!
+            $( "#dialog:ui-dialog" ).dialog( "destroy" );
+
+
+            $( "#dialog-confirm" ).dialog({
+                resizable: false,
+                height:240,
+                modal: true,
+                buttons: {
+                    "Delete this initiative": function() {
+                        // make an ajax callback to delete this initiative
+                        //
+                        $("#initiatives").load('initiatives/' + i_id +'/remove', function(){
+
+                            //Make an ajax callback to reload the initiatives
+                             $("#initiatives").load('<%=url_for(list_initiatives_path)%>',{portfolio_id: <%=@portfolio_id%>}).fadeIn(1500);
+                        });
+
+                        $( this ).dialog( "close" );
+                    },
+                    Cancel: function() {
+                        $( this ).dialog( "close" );
+                    }
+                }
+            });
+        });
 
         $("#initiatives").on("click",'[id^="show"]',function(e){
-                   e.preventDefault();
-                  alert(this.id);
+            e.preventDefault();
+            var i_id=this.id.substr(this.id.indexOf('_')+1);
+                        alert(i_id);
                });
         
         $("#initiatives").on("click",'[id^="edit"]',function(e){
             e.preventDefault();
-            alert(this.id);
             //Get the database ID from the event
-
+            //
+            var i_id=this.id.substr(this.id.indexOf('_')+1);
+            //
             //Pop a modal edit window and make sure it re-loads the entire data grid if there is an update
             // Load the form into the div that will be used for the modal window
             //
             $( "#dialog:ui-dialog" ).dialog( "destroy" );
-            $("#edit_initiative_dialog_form").load('initiatives/edit?portfolio_id=<%=@portfolio_id%>',setFocus());
+            $("#edit_initiative_dialog_form").load('initiatives/' + i_id + '/edit');
             $("#edit_initiative_dialog_form").dialog(
                         {
                          height: 600,
@@ -177,3 +207,6 @@
 
 <div id="new_initiative_dialog_form" title="New Initiative"></div>
 <div id="edit_initiative_dialog_form" title="Edit Initiative"></div>
+<div id="dialog-confirm" title="Delete this initiative?">
+	<p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>This initiative will be deleted. Are you sure?</p>
+</div>

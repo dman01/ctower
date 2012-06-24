@@ -29,7 +29,7 @@ module InitiativesHelper
 
     def list_phases(initiative)
     #get the phases for the process associated with the portfolio
-    phases=initiative.portfolios[0].portfolio_process.phases
+    phases=initiative.portfolio.portfolio_process.phases
     retval=""
     phases.each do |p|
       sel=""

@@ -18,7 +18,10 @@ Ctower::Application.routes.draw do
       collection do
         post 'list'
       end
-    end
+      member do
+         get 'remove'
+      end
+      end
 
 
   resources :deliverables

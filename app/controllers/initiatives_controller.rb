@@ -54,11 +54,12 @@ class InitiativesController < ApplicationController
 
   # GET /initiatives/1/edit
   def edit
-    @initiative = Initiative.find(params[:id])
+    i_id=params[:id]
+    @initiative = Initiative.find(i_id)
+    @portfolio_id=@initiative.portfolio_id
 
     respond_to do |format|
-      #format.html # new.html.erb
-      format.js
+      format.html {render partial: 'form'}
     end
   end
 
@@ -104,7 +105,8 @@ class InitiativesController < ApplicationController
 
     respond_to do |format|
       if @initiative.update_attributes(params[:initiative])
-        format.html { redirect_to @initiative, notice: 'Initiative was successfully updated.' }
+        format.html { render :nothing => true }
+        #format.html { redirect_to @initiative, notice: 'Initiative was successfully updated.' }
         format.json { head :ok }
       else
         format.html { render action: "edit" }
@@ -120,8 +122,16 @@ class InitiativesController < ApplicationController
     @initiative.destroy
 
     respond_to do |format|
-      format.html { redirect_to initiatives_url }
-      format.json { head :ok }
+     format.html { render :nothing => true }
+      #format.html { redirect_to initiatives_url }
+     format.json { head :ok }
     end
+  end
+
+  def remove
+    #work around as I just couldn't figure out how to call destroy via an ajax call
+    #Remember to also update the route if deciding to delete this method
+    destroy
+
   end
 end
